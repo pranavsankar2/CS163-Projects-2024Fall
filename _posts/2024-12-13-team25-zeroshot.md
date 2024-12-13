@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: Contrastive Language–Image Pre-training Applications and Extensions
-author: UCLAdeepvision
+author: Pranav Sankar, Pranav Subbaraman, Vishnu Manathattai, Nathan Wei 
 date: 2024-12-13
 ---
 
