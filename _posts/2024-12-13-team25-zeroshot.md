@@ -14,7 +14,8 @@ date: 2024-12-13
 * TOC
 {:toc}
 
-## FALIP: Visual Prompt as Foveal Attention Boosts CLIP Zero-Shot Performance (https://arxiv.org/pdf/2407.05578v1)
+## FALIP: Visual Prompt as Foveal Attention Boosts CLIP Zero-Shot Performance 
+[Link to Paper](https://arxiv.org/pdf/2407.05578v1)
 
 ### Background
 FALIP is introduced in this paper as a novel method to enhance the zero-shot performance of the CLIP model. Its key strength lies in achieving this enhancement without modifying the original image or requiring additional training. While the baseline CLIP model already demonstrates impressive zero-shot performance across various tasks, previous methods have sought to improve it by employing visual prompts, such as colored circles or blur masks, to guide the model’s attention mechanisms. These visual prompts can effectively direct the CLIP model’s focus to specific regions of the image. However, they compromise the image’s overall integrity, creating a trade-off between preserving image fidelity and boosting model performance.
