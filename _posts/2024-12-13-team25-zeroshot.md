@@ -111,16 +111,15 @@ Compared to popular $n$-gram matching metrics such as BLEU, CIDEr, SPICE, etc. ,
 
 
 
-### Running the CLIP Codebase
+## Running the CLIP Codebase
 Here we run the CLIP codebase from [this GitHub repository](https://github.com/openai/CLIP) to reproduce the results locally.
 
-# Test #1
+### Test #1
 Given an image of a diagram and the labels, “a diagram”, “a dog”, and “a cat”, after running the below code, we get the following predictions. After reproducing this locally, we get similar results.
 
 ![YOLO]({{ '/assets/images/Team25/newcifar.png' | relative_url }})
 {: style="width: 800px; max-width: 100%;"}
 
-Input image:
 ![YOLO]({{ '/assets/images/Team25/diagram.png' | relative_url }})
 {: style="width: 800px; max-width: 100%;"}
 
@@ -128,7 +127,34 @@ Here are the results we get after running this locally (the scores correspond to
 ![YOLO]({{ '/assets/images/Team25/firstlabel.png' | relative_url }})
 {: style="width: 800px; max-width: 100%;"}
 
-# Test #2
+### Test #2
+We give a new image of a soccer ball and the labels “soccer ball”, “basketball”, and “tennis ball” (in this order).
+
+Input image:
+![YOLO]({{ '/assets/images/Team25/soccerball.png' | relative_url }})
+{: style="width: 800px; max-width: 100%;"}
+
+![YOLO]({{ '/assets/images/Team25/test2results.png' | relative_url }})
+{: style="width: 800px; max-width: 100%;"}
+
+### Test #3
+
+We give a new image of an iPhone and the labels “iPhone”, “Samsung Galaxy Phone”, and “Google Pixel Phone” (in this order).
+
+Input image:
+![YOLO]({{ '/assets/images/Team25/iPhone.png' | relative_url }})
+{: style="width: 800px; max-width: 100%;"}
+
+![YOLO]({{ '/assets/images/Team25/phonecode.png' | relative_url }})
+{: style="width: 800px; max-width: 100%;"}
+
+### More Zero-Shot Prediction Examples
+
+Here we locally reproduce the zero-shot capabilities of CLIP. We take a random image from the CIFAR-100 dataset and predict the top 5 most likely labels among the 100 labels from this dataset.
+
+### Test #1
+
+Input image:
 
 ## Main Content
 Your survey starts here. You can refer to the [source code](https://github.com/lilianweng/lil-log/tree/master/_posts) of [lil's blogs](https://lilianweng.github.io/lil-log/) for article structure ideas or Markdown syntax. We've provided a [sample post](https://ucladeepvision.github.io/CS188-Projects-2022Winter/2017/06/21/an-overview-of-deep-learning.html) from Lilian Weng and you can find the source code [here](https://raw.githubusercontent.com/UCLAdeepvision/CS188-Projects-2022Winter/main/_posts/2017-06-21-an-overview-of-deep-learning.md)
