@@ -171,4 +171,6 @@ Please make sure to cite properly in your work, for example:
 
 [4] Hessel, J., Holtzman, A., Forbes, M., Le Bras, R., Choi, Y. (2022). CLIPScore: A Reference-free Evaluation Metric for Image Captioning. https://arxiv.org/pdf/2104.08718
 
+[5] Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, L., & Polosukhin, I. (2017, June 12). Attention Is All You Need. ArXiv. https://arxiv.org/abs/1706.03762
+
 ---
