@@ -6,7 +6,8 @@ author: Pranav Sankar, Pranav Subbaraman, Vishnu Manathattai, Nathan Wei
 date: 2024-12-13
 ---
 
-> This block is a brief introduction of your project. You can put your abstract here or any headers you want the readers to know.
+> With the strong data-driven nature of training Computer Vision models, the demand for reliably annotated data is quite high. Manually labeling datasets is very time consuming and a bottleneck to progression. Another bottleneck comes from training large, specialized models from scratch on these big datasets, which is computationally expensive. In the mid 2010s, the method of pretraining deep ConvNets on ImageNet before fine-tuning on a specific downstream image classification task was popular. This effectively set a baseline of visual features that newer models could build off of. However, multi-modal relationships between image and text weren’t strong enough and there was still the need to fine-tune models. We focus this blog on exploring CLIP (Contrastive Language-Image Pre-training). The purpose of CLIP is to perform zero/few-shot learning (the ability to classify images seeing little to no prior examples). The idea is that fine-tuning would not be compulsory. CLIP achieved state of the art results in zero shot. Also, CLIP has been extended and improved, we’ll go into deeper detail below. CLIP opened the door for CLIPScore, a unique and preferred evaluation metric for image captioning. CLIP’s rich text encoder is also used in latent diffusion models (LDM) for text conditioning. FALIP also brought improvements and variations to the original CLIP.
+
 
 
 <!--more-->
