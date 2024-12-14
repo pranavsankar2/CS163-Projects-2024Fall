@@ -112,10 +112,10 @@ Compared to popular $n$-gram matching metrics such as BLEU, CIDEr, SPICE, etc. ,
 ![YOLO]({{ '/assets/images/Team25/cifarcode.jpg' | relative_url }})
 {: style="width: 800px; max-width: 100%;"}
 
-## Key Functional Features
+### Key Functional Features
 The key functional features of this protocol include reference-free evaluation, overcoming the limitations of n-gram matching, and providing complementary information. To begin with, the reference-free evaluation feature of CLIPScore enables it to assess caption quality by analyzing both the image and the candidate caption. This process mirrors the human ability to interpret the contextual meaning of captions when provided with images. For example, when babies learn to identify concepts, they are often shown an example of an object (ex. chair) and a verbal command describing the concept, and being able to generalize the concept chair to chairs of different shapes and sizes. Moreover, the feature of overcoming n-gram matching limitations addresses the challenges posed by traditional metrics, which rely on exact word matching with a reference. Finally, the complementary information feature is demonstrated through CLIPScore’s ability to provide additional insights to existing reference-based metrics, as evidenced by information gain experiments.
 
-## Results + Applications
+### Results + Applications
 The applications of using CLIPScore are numerous, and extend beyond just being used in training for CLIP models. For example, for text-to-image retrieval tasks, CLIPScore could be utilized in order to rank the ability of a search engine to perform this task. Furthermore, CLIPScore can be an additional metric to assess the performance and semantic alignment of text-to-image generative models. In the end, we want to build more intuitive, controllable systems for image generation tasks. One of the key aspects of aligning to human thought is through language. CLIP, which provides a rich source of multimodal (image, text) embeddings can serve as a strong fusion of knowledge towards bridging the gap between user preferences and model generation. 
 
 Furthermore, CLIP can be extended to additional modalities. For example, there is CLAP, which is a contrastive language and audio foundation model. This can be similarly used for augmenting text-to-audio generation models and serve as a powerful evaluation metric (CLAP score) for assessing text-to-audio generation alignment with user preferences (e.g. fireworks and people cheering, 90s retro synth).
@@ -125,7 +125,7 @@ Furthermore, CLIP can be extended to additional modalities. For example, there i
 As demonstrated by the table from the paper, CLIPScore performs much better than adversarial evaluation metrics in determining similarity between text and image embeddings. 
 
 
-## Running the CLIP Codebase
+### Running the CLIP Codebase
 Here we run the CLIP codebase from [this GitHub repository](https://github.com/openai/CLIP) to reproduce the results locally.
 
 ### Test #1
@@ -252,51 +252,6 @@ These are the results we get:
 {: style="width: 800px; max-width: 100%;"}
 
 Overall, our implementation of a text-to-image search algorithm using CLIP had overall good results. We think it can be extended to different domains and use cases. For example, if we have a very large dataset of medical scans for different parts of the body, with some extra finetuning, doctors can potentially use this text-to-image search tool to search for these scans with a textual query.
-
-## Main Content
-Your survey starts here. You can refer to the [source code](https://github.com/lilianweng/lil-log/tree/master/_posts) of [lil's blogs](https://lilianweng.github.io/lil-log/) for article structure ideas or Markdown syntax. We've provided a [sample post](https://ucladeepvision.github.io/CS188-Projects-2022Winter/2017/06/21/an-overview-of-deep-learning.html) from Lilian Weng and you can find the source code [here](https://raw.githubusercontent.com/UCLAdeepvision/CS188-Projects-2022Winter/main/_posts/2017-06-21-an-overview-of-deep-learning.md)
-
-## Basic Syntax
-### Image
-Please create a folder with the name of your team id under /assets/images/, put all your images into the folder and reference the images in your main content.
-
-You can add an image to your survey like this:
-![YOLO]({{ '/assets/images/UCLAdeepvision/object_detection.png' | relative_url }})
-{: style="width: 400px; max-width: 100%;"}
-*Fig 1. YOLO: An object detection method in computer vision* [1].
-
-Please cite the image if it is taken from other people's work.
-
-
-### Table
-Here is an example for creating tables, including alignment syntax.
-
-|             | column 1    |  column 2     |
-| :---        |    :----:   |          ---: |
-| row1        | Text        | Text          |
-| row2        | Text        | Text          |
-
-
-
-### Code Block
-```
-# This is a sample code block
-import torch
-print (torch.__version__)
-```
-
-
-### Formula
-Please use latex to generate formulas, such as:
-
-$$
-\tilde{\mathbf{z}}^{(t)}_i = \frac{\alpha \tilde{\mathbf{z}}^{(t-1)}_i + (1-\alpha) \mathbf{z}_i}{1-\alpha^t}
-$$
-
-or you can write in-text formula $$y = wx + b$$.
-
-### More Markdown Syntax
-You can find more Markdown syntax at [this page](https://www.markdownguide.org/basic-syntax/).
 
 ## Reference
 Please make sure to cite properly in your work, for example:
