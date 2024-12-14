@@ -125,7 +125,7 @@ Furthermore, CLIP can be extended to additional modalities. For example, there i
 As demonstrated by the table from the paper, CLIPScore performs much better than adversarial evaluation metrics in determining similarity between text and image embeddings. 
 
 
-### Running the CLIP Codebase
+## Running the CLIP Codebase
 Here we run the CLIP codebase from [this GitHub repository](https://github.com/openai/CLIP) to reproduce the results locally.
 
 ### Test #1
