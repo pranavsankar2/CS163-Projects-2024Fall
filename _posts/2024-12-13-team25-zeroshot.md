@@ -138,6 +138,7 @@ Given an image of a diagram and the labels, “a diagram”, “a dog”, and �
 {: style="width: 800px; max-width: 100%;"}
 
 Here are the results we get after running this locally (the scores correspond to diagram, dog, cat respectively)
+
 ![YOLO]({{ '/assets/images/Team25/firstlabel.png' | relative_url }})
 {: style="width: 800px; max-width: 100%;"}
 
