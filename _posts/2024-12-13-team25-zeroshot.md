@@ -14,28 +14,7 @@ date: 2024-12-13
 * TOC
 {:toc}
 
-## FALIP: Visual Prompt as Foveal Attention Boosts CLIP Zero-Shot Performance 
-[Link to Paper](https://arxiv.org/pdf/2407.05578v1)
-
-### Background
-FALIP is introduced in this paper as a novel method to enhance the zero-shot performance of the CLIP model. Its key strength lies in achieving this enhancement without modifying the original image or requiring additional training. While the baseline CLIP model already demonstrates impressive zero-shot performance across various tasks, previous methods have sought to improve it by employing visual prompts, such as colored circles or blur masks, to guide the model’s attention mechanisms. These visual prompts can effectively direct the CLIP model’s focus to specific regions of the image. However, they compromise the image’s overall integrity, creating a trade-off between preserving image fidelity and boosting model performance.
-
-![YOLO]({{ '/assets/images/Team25/image2.jpg' | relative_url }})
-{: style="width: 800px; max-width: 100%;"}
-
-### Methodology
-The FALIP method for enhancing the CLIP model’s zero-shot performance involves multiple steps. First, the method applies a foveal attention mask to highlight the regions of attention (ROA) in the image. This mask is then integrated into CLIP’s multi-head self-attention module, which is used to conceptualize the relationships between various regions of the image. Finally, the model’s attention is aligned with human-like visual perception, focusing on specific regions without directly modifying the image.
-
-![YOLO]({{ '/assets/images/Team25/image3.jpg' | relative_url }})
-{: style="width: 800px; max-width: 100%;"}
-
-### Key Functional Features
-The key functional distinctions between the CLIP model and the FALIP method proposed in this paper provide FALIP with a significant advantage over the standard CLIP pipeline. First, FALIP features a plug-and-play design, enabling the direct integration of CLIP models into the FALIP methodology without requiring substantial modifications to the model architecture. Additionally, the computational cost of this modified approach is considerably lower compared to other methods proposed for enhancing the CLIP model. Finally, preserving image integrity is a cornerstone of the FALIP method. It achieves this by guiding the model’s attention while maintaining the essential fidelity of the input image. This is accomplished through adaptive attention guidance, the core of the FALIP method, which inserts foveal attention masks into the multi-head self-attention module, enabling task-specific focus for the model.
-
-### Applications
-The FALIP protocol was evaluated on several zero-shot tasks, including Referring Expression Comprehension (REC), image classification, and 3D Point Cloud Recognition. For the Referring Expression Comprehension (REC) task, a five-stage process was employed to identify an image region based on a textual description. First, the input, consisting of an image with bounding boxes and a textual description, was processed through the pipeline, where the bounding boxes were transformed into masks. Next, the similarity between the text and the image regions was calculated. A “subtract” operation was then applied to reduce the weights of less relevant similarities. Finally, the best-matching region was selected based on the computed scores. The Image Classification task followed a slightly modified process. In this case, the bounding boxes were converted into a single mask. The protocol then calculated similarity scores by comparing the image to each category’s textual description to determine the best match. For 3D Point Cloud Recognition, the 3D point cloud was projected into six 2D depth maps. The foreground portions of these depth maps were converted into masks, and similarity scores were computed between each view and the category texts. The views were then weighted and combined to produce the final prediction. By evaluating the FALIP protocol across these zero-shot tasks, its effectiveness and versatility in diverse applications were demonstrated.
-
-## Learning Transferable Visual Models From Natural Language Supervision
+## Learning Transferable Visual Models From Natural Language Supervision (CLIP)
 [Link to Paper](https://arxiv.org/pdf/2103.00020)
 
 ## Background
@@ -57,6 +36,26 @@ In addition, the researchers of the paper explored how CLIP performs compared to
 
 Overall, CLIP is a revolutionary concept in the area of zero-shot that allows for processing of large quantities of data for significant underlying understanding of the relationship between text and images. The results of the paper demonstrate that the usage of attention and similarity in a shared embedding space is key to understanding this relationship to a broad extent. 
 
+## FALIP: Visual Prompt as Foveal Attention Boosts CLIP Zero-Shot Performance 
+[Link to Paper](https://arxiv.org/pdf/2407.05578v1)
+
+### Background
+FALIP is introduced in this paper as a novel method to enhance the zero-shot performance of the CLIP model. Its key strength lies in achieving this enhancement without modifying the original image or requiring additional training. While the baseline CLIP model already demonstrates impressive zero-shot performance across various tasks, previous methods have sought to improve it by employing visual prompts, such as colored circles or blur masks, to guide the model’s attention mechanisms. These visual prompts can effectively direct the CLIP model’s focus to specific regions of the image. However, they compromise the image’s overall integrity, creating a trade-off between preserving image fidelity and boosting model performance.
+
+![YOLO]({{ '/assets/images/Team25/image2.jpg' | relative_url }})
+{: style="width: 800px; max-width: 100%;"}
+
+### Methodology
+The FALIP method for enhancing the CLIP model’s zero-shot performance involves multiple steps. First, the method applies a foveal attention mask to highlight the regions of attention (ROA) in the image. This mask is then integrated into CLIP’s multi-head self-attention module, which is used to conceptualize the relationships between various regions of the image. Finally, the model’s attention is aligned with human-like visual perception, focusing on specific regions without directly modifying the image.
+
+![YOLO]({{ '/assets/images/Team25/image3.jpg' | relative_url }})
+{: style="width: 800px; max-width: 100%;"}
+
+### Key Functional Features
+The key functional distinctions between the CLIP model and the FALIP method proposed in this paper provide FALIP with a significant advantage over the standard CLIP pipeline. First, FALIP features a plug-and-play design, enabling the direct integration of CLIP models into the FALIP methodology without requiring substantial modifications to the model architecture. Additionally, the computational cost of this modified approach is considerably lower compared to other methods proposed for enhancing the CLIP model. Finally, preserving image integrity is a cornerstone of the FALIP method. It achieves this by guiding the model’s attention while maintaining the essential fidelity of the input image. This is accomplished through adaptive attention guidance, the core of the FALIP method, which inserts foveal attention masks into the multi-head self-attention module, enabling task-specific focus for the model.
+
+### Applications
+The FALIP protocol was evaluated on several zero-shot tasks, including Referring Expression Comprehension (REC), image classification, and 3D Point Cloud Recognition. For the Referring Expression Comprehension (REC) task, a five-stage process was employed to identify an image region based on a textual description. First, the input, consisting of an image with bounding boxes and a textual description, was processed through the pipeline, where the bounding boxes were transformed into masks. Next, the similarity between the text and the image regions was calculated. A “subtract” operation was then applied to reduce the weights of less relevant similarities. Finally, the best-matching region was selected based on the computed scores. The Image Classification task followed a slightly modified process. In this case, the bounding boxes were converted into a single mask. The protocol then calculated similarity scores by comparing the image to each category’s textual description to determine the best match. For 3D Point Cloud Recognition, the 3D point cloud was projected into six 2D depth maps. The foreground portions of these depth maps were converted into masks, and similarity scores were computed between each view and the category texts. The views were then weighted and combined to produce the final prediction. By evaluating the FALIP protocol across these zero-shot tasks, its effectiveness and versatility in diverse applications were demonstrated.
 
 ![YOLO]({{ '/assets/images/Team25/image4.jpg' | relative_url }})
 {: style="width: 800px; max-width: 100%;"}
