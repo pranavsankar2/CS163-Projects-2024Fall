@@ -23,6 +23,10 @@ CLIP refers to Contrastive Language Image Pretraining, which is a method in whic
 ### Methodology
 In the paper, the authors propose training CLIP via building a dataset of 400 million image-label pair samples as they noted the varying and sparse nature of metadata available for other major image caption datasets. The next consideration is the models to use for the text and image encoders. In the paper, the authors experiment with various Resnet models as well as vision transformers for the image encoders, and use the transformer presented in “Attention is All You Need” for the text encoders. For the training process, firstly, the (image, text) pairs are created via taking the class label for each image, and treating it as text (rather than a one-hot encoded class). Then, the text transformer is run on the text while the image encoder (either Resnet or ViT) is run on the input image, resulting in feature embeddings for both the text and image separately. Then, the concept of a “shared” embedding is implemented via calculating cosine similarities between the features for the image and text embeddings. Then, cross-entropy loss is utilized on the predicted similarities, optimizing for greater similarity between correct image-text labels and lower similarity between incorrect labels. 
 
+![YOLO]({{ '/assets/images/Team25/clipdesc.JPG' | relative_url }})
+{: style="width: 800px; max-width: 100%;"}
+*Fig 1. Clip model example input.* [2].
+
 ### Key Functional Features
 The key functional difference between CLIP and other Zero-Shot models is that traditionally, zero-shot had been using semantic features as the way to embed descriptive information about images. CLIP improved on this by using natural language as the semantic features to match with the images, as this allows for a much stronger and generalizable embedding than a fixed algorithm for feature extraction. The second innovation is the way the CLIP model utilizes attention mechanisms to accomplish its image-text correspondence goal. The use of attention in the vision transformer to encode the image into descriptive features and the text encoder transformer allows for extracting more descriptive information from the input, and in the context of the text, can develop relationships between the different words. This further contributes to the strength of the CLIP models because by the time the cosine similarity between the embeddings is calculated, there is a sense that the embeddings themselves are strong descriptors for the inputs. 
 
@@ -34,13 +38,13 @@ CLIP’s results are quite strong, demonstrating a large improvement from other 
 
 ![YOLO]({{ '/assets/images/Team25/clipvothermodels.JPG' | relative_url }})
 {: style="width: 800px; max-width: 100%;"}
-*Fig 1. Clip vs other CV Models on 27-dataset evluation.* [1].
+*Fig 2. Clip vs other CV Models on 27-dataset evluation.* [1].
 
 In addition, the researchers of the paper explored how CLIP performs compared to humans. Particularly, they both evaluated on the Oxford IIIT Pets dataset, and the CLIP model outperformed the humans significantly, by around 18% in terms of accuracy. However, the researchers did note one pitfall of CLIP compared to humans, and it is that with just one extra class sample, humans had a remarkably better ability to learn the class. What this means is that humans are very good at learning fast and with limited training samples compared to the CLIP model. However, with the broad range of data that CLIP was trained on, in the overall task it does better, but this consideration is one that suggests that there might be other methods that allow a model to generalize as well, and as efficiently, as humans can. 
 
 ![YOLO]({{ '/assets/images/Team25/zeroshotvhuman.JPG' | relative_url }})
 {: style="width: 800px; max-width: 100%;"}
-*Fig 2. Clip vs humans on Oxford IIIT Pets Dataset.* [1].
+*Fig 3. Clip vs humans on Oxford IIIT Pets Dataset.* [1].
 
 Overall, CLIP is a revolutionary concept in the area of zero-shot that allows for processing of large quantities of data for significant underlying understanding of the relationship between text and images. The results of the paper demonstrate that the usage of attention and similarity in a shared embedding space is key to understanding this relationship to a broad extent. 
 
