@@ -194,6 +194,64 @@ Input image:
 ![YOLO]({{ '/assets/images/Team25/mousecode.png' | relative_url }})
 {: style="width: 800px; max-width: 100%;"}
 
+## Implementing Our Own Ideas: Text-to-Image Search with CLIP
+
+We implemented a new capability on top of CLIP: text-to-image search. This tool can be used to query for relevant images given some text prompt
+
+First, we load a dataset of images and preprocess these images. Our dataset included images from different categories such as sports, nature, animals, consumer products, etc.
+
+Next, given a dataset of images, we create image embeddings via CLIP’s image encoder.
+
+![YOLO]({{ '/assets/images/Team25/imageembedding.png' | relative_url }})
+{: style="width: 800px; max-width: 100%;"}
+
+We have a list of example user text queries such as the following:
+![YOLO]({{ '/assets/images/Team25/text.png' | relative_url }})
+{: style="width: 800px; max-width: 100%;"}
+
+Using this list of text prompts, we use CLIP’s text encoder to create text embeddings in the shared image-text embedding space.
+![YOLO]({{ '/assets/images/Team25/textembedding.png' | relative_url }})
+{: style="width: 800px; max-width: 100%;"}
+
+Once we have embedded both the dataset of images and user text queries in this shared embedding space, we can calculate the similarities between a given text prompt and an image using cosine similarity. An image embedding vector and a text vector will have a high cosine similarity if they are related to each other because CLIP embeds both of these in a **shared** embedding space.
+
+We calculate cosine similarity between text and image embedding vectors with the following:
+![YOLO]({{ '/assets/images/Team25/cosine.png' | relative_url }})
+{: style="width: 800px; max-width: 100%;"}
+
+Finally, we write a function to take the top k most similar images to a given text prompt. We choose k=3 for this example.
+![YOLO]({{ '/assets/images/Team25/display.png' | relative_url }})
+{: style="width: 800px; max-width: 100%;"}
+
+These are the results we get:
+![YOLO]({{ '/assets/images/Team25/animalresults.png' | relative_url }})
+{: style="width: 800px; max-width: 100%;"}
+![YOLO]({{ '/assets/images/Team25/giraffe.png' | relative_url }})
+{: style="width: 800px; max-width: 100%;"}
+![YOLO]({{ '/assets/images/Team25/elephant.png' | relative_url }})
+{: style="width: 800px; max-width: 100%;"}
+![YOLO]({{ '/assets/images/Team25/bird.png' | relative_url }})
+{: style="width: 800px; max-width: 100%;"}
+
+![YOLO]({{ '/assets/images/Team25/sportsresults.png' | relative_url }})
+{: style="width: 800px; max-width: 100%;"}
+![YOLO]({{ '/assets/images/Team25/tennis.png' | relative_url }})
+{: style="width: 800px; max-width: 100%;"}
+![YOLO]({{ '/assets/images/Team25/basket.png' | relative_url }})
+{: style="width: 800px; max-width: 100%;"}
+![YOLO]({{ '/assets/images/Team25/soccer.png' | relative_url }})
+{: style="width: 800px; max-width: 100%;"}
+
+![YOLO]({{ '/assets/images/Team25/smartphoneresults.png' | relative_url }})
+{: style="width: 800px; max-width: 100%;"}
+![YOLO]({{ '/assets/images/Team25/pixel.png' | relative_url }})
+{: style="width: 800px; max-width: 100%;"}
+![YOLO]({{ '/assets/images/Team25/iPhone.png' | relative_url }})
+{: style="width: 800px; max-width: 100%;"}
+![YOLO]({{ '/assets/images/Team25/samsung.png' | relative_url }})
+{: style="width: 800px; max-width: 100%;"}
+
+Overall, our implementation of a text-to-image search algorithm using CLIP had overall good results. We think it can be extended to different domains and use cases. For example, if we have a very large dataset of medical scans for different parts of the body, with some extra finetuning, doctors can potentially use this text-to-image search tool to search for these scans with a textual query.
 
 ## Main Content
 Your survey starts here. You can refer to the [source code](https://github.com/lilianweng/lil-log/tree/master/_posts) of [lil's blogs](https://lilianweng.github.io/lil-log/) for article structure ideas or Markdown syntax. We've provided a [sample post](https://ucladeepvision.github.io/CS188-Projects-2022Winter/2017/06/21/an-overview-of-deep-learning.html) from Lilian Weng and you can find the source code [here](https://raw.githubusercontent.com/UCLAdeepvision/CS188-Projects-2022Winter/main/_posts/2017-06-21-an-overview-of-deep-learning.md)
@@ -253,4 +311,17 @@ Please make sure to cite properly in your work, for example:
 
 [5] Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, L., & Polosukhin, I. (2017, June 12). Attention Is All You Need. ArXiv. https://arxiv.org/abs/1706.03762
 
+[6] Pierce, F. (2020, May 17). From A-Z, how a soccer ball reaches a consumer’s doorstep, by Kewill | Procurement. Supply Chain Digital. https://supplychaindigital.com/procurement/z-how-soccer-ball-reaches-consumers-doorstep-kewill
+
+[7] Refurbished iPhone 13 128GB - Pink (Unlocked) - Apple. (n.d.). Www.apple.com. https://www.apple.com/shop/product/FLMN3LL/A/refurbished-iphone-13-128gb-pink-unlocked
+
+[8] Giraffes: Diet, Habitat, Threats, & Conservation. (n.d.). IFAW. https://www.ifaw.org/uk/animals/giraffes
+
+[9] Wikipedia Contributors. (2018, November 29). Elephant. Wikipedia; Wikimedia Foundation. https://en.wikipedia.org/wiki/Elephant
+
+[10] Smith, C. (2019, February 7). Bird Feature: Eastern Bluebird. Nature’s Way Bird Products; Nature’s Way Bird Products. https://www.natureswaybirds.com/blogs/news/bird-feature-bluebird#&gid=1&pid=1
+
+[11] Tennis ball. (2019). Nature’s Workshop Plus. https://www.workshopplus.com/products/tennis-ball
+
+[12] Wikipedia Contributors. (2022, May 23). Basketball (ball). Wikipedia; Wikimedia Foundation. https://en.wikipedia.org/wiki/Basketball_%28ball%29
 ---
