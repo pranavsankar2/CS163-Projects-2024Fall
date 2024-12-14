@@ -109,7 +109,7 @@ $$
 
 Compared to popular $n$-gram matching metrics such as BLEU, CIDEr, SPICE, etc. CLIPScore outperforms them in terms of correlation with human judgement.
 
-![YOLO]({{ '/assets/images/Team25/cifarcode.png' | relative_url }})
+![YOLO]({{ '/assets/images/Team25/random.JPG' | relative_url }})
 {: style="width: 800px; max-width: 100%;"}
 
 ### Key Functional Features
