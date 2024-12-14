@@ -26,7 +26,7 @@ In the paper, the authors propose training CLIP via building a dataset of 400 mi
 
 ![YOLO]({{ '/assets/images/Team25/clipdesc.JPG' | relative_url }})
 {: style="width: 800px; max-width: 100%;"}
-*Fig 1. Clip model example input.* [2].
+*Fig 1. Clip model example input.* [3].
 
 ### Key Functional Features
 The key functional difference between CLIP and other Zero-Shot models is that traditionally, zero-shot had been using semantic features as the way to embed descriptive information about images. CLIP improved on this by using natural language as the semantic features to match with the images, as this allows for a much stronger and generalizable embedding than a fixed algorithm for feature extraction. The second innovation is the way the CLIP model utilizes attention mechanisms to accomplish its image-text correspondence goal. The use of attention in the vision transformer to encode the image into descriptive features and the text encoder transformer allows for extracting more descriptive information from the input, and in the context of the text, can develop relationships between the different words. This further contributes to the strength of the CLIP models because by the time the cosine similarity between the embeddings is calculated, there is a sense that the embeddings themselves are strong descriptors for the inputs. 
