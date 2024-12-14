@@ -83,7 +83,7 @@ The FALIP protocol was evaluated on several zero-shot tasks, including Referring
 The FALIP protocol, as outlined in this paper, has demonstrated competitive results across numerous datasets for tested zero-shot tasks, underscoring its efficacy as a novel and improved method for zero-shot learning with CLIP. At its core, the modification of attention head sensitivity forms the foundation of the proposed technology. This approach was motivated by the discovery that CLIP models exhibit significant variability in their responses to visual prompts and that the attention heads in CLIP possess differing levels of sensitivity to the visual cues provided as input. This variability in sensitivity, which serves as a tunable hyperparameter, offers opportunities for further improvement by enabling testing and adjustment to enhance the effectiveness of visual prompts. Moreover, FALIP’s adaptability for domain-specific problems represents a critical area of interest for researchers and practitioners looking to apply it to other fields of study or industry applications. Overall, these results and insights highlight FALIP’s potential as a powerful and flexible approach for enhancing CLIP’s zero-shot capabilities across various visual understanding tasks, while also paving the way for future advancements in vision-language models.
 
 
-### CLIPScore
+## CLIPScore
 
 Traditionally, image captioning is evaluated in a reference-based manner, where captions created by machines are compared with those written by humans. This is different from the way humans evaluate captions, which is in a reference-free way. Humans merely see an image and a respective caption before judging its appropriateness. The CLIPScore metric emulates human judgement, evaluating captions without references. 
 
@@ -106,6 +106,8 @@ $$
 
 Compared to popular $n$-gram matching metrics such as BLEU, CIDEr, SPICE, etc. , CLIPScore outperforms them in terms of correlation with human judgement.
 
+![YOLO]({{ '/assets/images/Team25/clipscore.jpg' | relative_url }})
+{: style="width: 800px; max-width: 100%;"}
 
 
 
