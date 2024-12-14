@@ -165,7 +165,9 @@ Please make sure to cite properly in your work, for example:
 
 [1] Radford, A., Kim, J., Hallacy, C., Ramesh, A., Goh, G., Agarwal, S., Sastry, G., Askell, A., Mishkin, P., Clark, J., Krueger, G., & Sutskever, I. (2021). Learning Transferable Visual Models From Natural Language Supervision. https://arxiv.org/pdf/2103.00020
 
-[2] Frolov, V. (2021, January 14). CLIP from OpenAI: what is it and how you can try it out yourself. Habr. https://habr.com/en/articles/537334/
+[2] Zhuang, Jiedong, Jiaqi Hu, Lianrui Mu, Rui Hu, Xiaoyu Liang, Jiangnan Ye, and Haoji Hu. (2024). FALIP: Visual Prompt as Foveal Attention Boosts CLIP Zero-Shot Performance. https://arxiv.org/pdf/2407.05578
+
+[3] Frolov, V. (2021, January 14). CLIP from OpenAI: what is it and how you can try it out yourself. Habr. https://habr.com/en/articles/537334/
 
 [4] Hessel, J., Holtzman, A., Forbes, M., Le Bras, R., Choi, Y. (2022). CLIPScore: A Reference-free Evaluation Metric for Image Captioning. https://arxiv.org/pdf/2104.08718
 
