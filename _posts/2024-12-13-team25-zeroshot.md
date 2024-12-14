@@ -156,8 +156,8 @@ Input image:
 We give a new image of an iPhone and the labels “iPhone”, “Samsung Galaxy Phone”, and “Google Pixel Phone” (in this order).
 
 Input image:
-![YOLO]({{ '/assets/images/Team25/iPhone.png' | relative_url }})
-{: style="width: 800px; max-width: 100%;"}
+![YOLO]({{ '/assets/images/Team25/iphonepic.png' | relative_url }})
+{: style="width: 500px; max-width: 100%;"}
 
 ![YOLO]({{ '/assets/images/Team25/phonecode.png' | relative_url }})
 {: style="width: 800px; max-width: 100%;"}
@@ -225,31 +225,31 @@ Finally, we write a function to take the top k most similar images to a given te
 
 These are the results we get:
 ![YOLO]({{ '/assets/images/Team25/animalresults.png' | relative_url }})
-{: style="width: 800px; max-width: 100%;"}
+{: style="width: 500px; max-width: 100%;"}
 ![YOLO]({{ '/assets/images/Team25/giraffe.png' | relative_url }})
-{: style="width: 800px; max-width: 100%;"}
+{: style="width: 500px; max-width: 100%;"}
 ![YOLO]({{ '/assets/images/Team25/elephant.png' | relative_url }})
-{: style="width: 800px; max-width: 100%;"}
+{: style="width: 500px; max-width: 100%;"}
 ![YOLO]({{ '/assets/images/Team25/bird.png' | relative_url }})
-{: style="width: 800px; max-width: 100%;"}
+{: style="width: 500px; max-width: 100%;"}
 
 ![YOLO]({{ '/assets/images/Team25/sportsresults.png' | relative_url }})
-{: style="width: 800px; max-width: 100%;"}
+{: style="width: 500px; max-width: 100%;"}
 ![YOLO]({{ '/assets/images/Team25/tennis.png' | relative_url }})
-{: style="width: 800px; max-width: 100%;"}
+{: style="width: 500px; max-width: 100%;"}
 ![YOLO]({{ '/assets/images/Team25/basket.png' | relative_url }})
-{: style="width: 800px; max-width: 100%;"}
+{: style="width: 500px; max-width: 100%;"}
 ![YOLO]({{ '/assets/images/Team25/soccer.png' | relative_url }})
-{: style="width: 800px; max-width: 100%;"}
+{: style="width: 500px; max-width: 100%;"}
 
 ![YOLO]({{ '/assets/images/Team25/smartphonresults.png' | relative_url }})
-{: style="width: 800px; max-width: 100%;"}
+{: style="width: 500px; max-width: 100%;"}
 ![YOLO]({{ '/assets/images/Team25/pixel.png' | relative_url }})
-{: style="width: 800px; max-width: 100%;"}
+{: style="width: 500px; max-width: 100%;"}
 ![YOLO]({{ '/assets/images/Team25/iPhone.png' | relative_url }})
-{: style="width: 800px; max-width: 100%;"}
+{: style="width: 500px; max-width: 100%;"}
 ![YOLO]({{ '/assets/images/Team25/samsung.png' | relative_url }})
-{: style="width: 800px; max-width: 100%;"}
+{: style="width: 500px; max-width: 100%;"}
 
 Overall, our implementation of a text-to-image search algorithm using CLIP had overall good results. We think it can be extended to different domains and use cases. For example, if we have a very large dataset of medical scans for different parts of the body, with some extra finetuning, doctors can potentially use this text-to-image search tool to search for these scans with a textual query.
 
@@ -279,4 +279,6 @@ Please make sure to cite properly in your work, for example:
 [11] Tennis ball. (2019). Nature’s Workshop Plus. https://www.workshopplus.com/products/tennis-ball
 
 [12] Wikipedia Contributors. (2022, May 23). Basketball (ball). Wikipedia; Wikimedia Foundation. https://en.wikipedia.org/wiki/Basketball_%28ball%29
+
+
 ---
