@@ -138,6 +138,7 @@ You can find more Markdown syntax at [this page](https://www.markdownguide.org/b
 ## Reference
 Please make sure to cite properly in your work, for example:
 
-[1] Redmon, Joseph, et al. "You only look once: Unified, real-time object detection." *Proceedings of the IEEE conference on computer vision and pattern recognition*. 2016.
+[1] Radford, A., Kim, J., Hallacy, C., Ramesh, A., Goh, G., Agarwal, S., Sastry, G., Askell, A., Mishkin, P., Clark, J., Krueger, G., & Sutskever, I. (2021). Learning Transferable Visual Models From Natural Language Supervision. https://arxiv.org/pdf/2103.00020
+[2] Frolov, V. (2021, January 14). CLIP from OpenAI: what is it and how you can try it out yourself. Habr. https://habr.com/en/articles/537334/
 
 ---
