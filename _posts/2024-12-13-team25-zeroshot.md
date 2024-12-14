@@ -84,11 +84,14 @@ The FALIP protocol, as outlined in this paper, has demonstrated competitive resu
 
 
 ## CLIPScore
+[Link to Paper](https://arxiv.org/pdf/2104.08718)
 
+### Background
 Traditionally, image captioning is evaluated in a reference-based manner, where captions created by machines are compared with those written by humans. This is different from the way humans evaluate captions, which is in a reference-free way. Humans merely see an image and a respective caption before judging its appropriateness. The CLIPScore metric emulates human judgement, evaluating captions without references. 
 
 CLIPScore serves as a useful metric to compute vision and language alignment for text-to-image generation models, beyond scores that assess image quality. This helps assess and advance language control in text-to-image generation. 
 
+### Methodology
 Computing CLIPScore goes as follows:
 Given a candidate caption and image, you pass both through their respective CLIP feature extractors. Then, calculate the cosine similarity of the resultant embeddings. 
 
@@ -109,6 +112,17 @@ Compared to popular $n$-gram matching metrics such as BLEU, CIDEr, SPICE, etc. ,
 ![YOLO]({{ '/assets/images/Team25/cifarcode.jpg' | relative_url }})
 {: style="width: 800px; max-width: 100%;"}
 
+## Key Functional Features
+The key functional features of this protocol include reference-free evaluation, overcoming the limitations of n-gram matching, and providing complementary information. To begin with, the reference-free evaluation feature of CLIPScore enables it to assess caption quality by analyzing both the image and the candidate caption. This process mirrors the human ability to interpret the contextual meaning of captions when provided with images. For example, when babies learn to identify concepts, they are often shown an example of an object (ex. chair) and a verbal command describing the concept, and being able to generalize the concept chair to chairs of different shapes and sizes. Moreover, the feature of overcoming n-gram matching limitations addresses the challenges posed by traditional metrics, which rely on exact word matching with a reference. Finally, the complementary information feature is demonstrated through CLIPScore’s ability to provide additional insights to existing reference-based metrics, as evidenced by information gain experiments.
+
+## Results + Applications
+The applications of using CLIPScore are numerous, and extend beyond just being used in training for CLIP models. For example, for text-to-image retrieval tasks, CLIPScore could be utilized in order to rank the ability of a search engine to perform this task. Furthermore, CLIPScore can be an additional metric to assess the performance and semantic alignment of text-to-image generative models. In the end, we want to build more intuitive, controllable systems for image generation tasks. One of the key aspects of aligning to human thought is through language. CLIP, which provides a rich source of multimodal (image, text) embeddings can serve as a strong fusion of knowledge towards bridging the gap between user preferences and model generation. 
+
+Furthermore, CLIP can be extended to additional modalities. For example, there is CLAP, which is a contrastive language and audio foundation model. This can be similarly used for augmenting text-to-audio generation models and serve as a powerful evaluation metric (CLAP score) for assessing text-to-audio generation alignment with user preferences (e.g. fireworks and people cheering, 90s retro synth).
+![YOLO]({{ '/assets/images/Team25/clipscoreiamge.JPG' | relative_url }})
+{: style="width: 800px; max-width: 100%;"}
+
+As demonstrated by the table from the paper, CLIPScore performs much better than adversarial evaluation metrics in determining similarity between text and image embeddings. 
 
 
 ## Running the CLIP Codebase
