@@ -107,7 +107,7 @@ $$
 \texttt{RefCLIP-S}(\textbf{c}, \textbf{R}, \textbf{v}) = \text{H-Mean}(\texttt{CLIP-S}(\textbf{c}, \textbf{v}), \max(\max_{\textbf{r} \in \textbf{R}} \cos(\textbf{c}, \textbf{r}), 0)) 
 $$
 
-Compared to popular $n$-gram matching metrics such as BLEU, CIDEr, SPICE, etc. , CLIPScore outperforms them in terms of correlation with human judgement.
+Compared to popular $n$-gram matching metrics such as BLEU, CIDEr, SPICE, etc. CLIPScore outperforms them in terms of correlation with human judgement.
 
 ![YOLO]({{ '/assets/images/Team25/cifarcode.png' | relative_url }})
 {: style="width: 800px; max-width: 100%;"}
