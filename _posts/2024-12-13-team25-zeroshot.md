@@ -32,7 +32,15 @@ The applications of the CLIP model are numerous, as the ability to match text em
 ### Results and Discussion:
 CLIP’s results are quite strong, demonstrating a large improvement from other zero-shot and general image classification models in the past. Below is these improvements visualized, showing the relative accuracy compared to other competitive models on a 27-dataset test (to demonstrate CLIP’s ability to tackle a broad range of problems). 
 
-In addition, the researchers of the paper explored how CLIP performs compared to humans. Particularly, they both evaluated on the Oxford IIT Pets dataset, and the CLIP model outperformed the humans significantly, by around 18% in terms of accuracy. However, the researchers did note one pitfall of CLIP compared to humans, and it is that with just one extra class sample, humans had a remarkably better ability to learn the class. What this means is that humans are very good at learning fast and with limited training samples compared to the CLIP model. However, with the broad range of data that CLIP was trained on, in the overall task it does better, but this consideration is one that suggests that there might be other methods that allow a model to generalize as well, and as efficiently, as humans can. 
+![YOLO]({{ '/assets/images/Team25/clipvothermodels.JPG' | relative_url }})
+{: style="width: 800px; max-width: 100%;"}
+*Fig 1. Clip vs other CV Models on 27-dataset evluation.* [1].
+
+In addition, the researchers of the paper explored how CLIP performs compared to humans. Particularly, they both evaluated on the Oxford IIIT Pets dataset, and the CLIP model outperformed the humans significantly, by around 18% in terms of accuracy. However, the researchers did note one pitfall of CLIP compared to humans, and it is that with just one extra class sample, humans had a remarkably better ability to learn the class. What this means is that humans are very good at learning fast and with limited training samples compared to the CLIP model. However, with the broad range of data that CLIP was trained on, in the overall task it does better, but this consideration is one that suggests that there might be other methods that allow a model to generalize as well, and as efficiently, as humans can. 
+
+![YOLO]({{ '/assets/images/Team25/zeroshotvhuman.JPG' | relative_url }})
+{: style="width: 800px; max-width: 100%;"}
+*Fig 2. Clip vs humans on Oxford IIIT Pets Dataset.* [1].
 
 Overall, CLIP is a revolutionary concept in the area of zero-shot that allows for processing of large quantities of data for significant underlying understanding of the relationship between text and images. The results of the paper demonstrate that the usage of attention and similarity in a shared embedding space is key to understanding this relationship to a broad extent. 
 
