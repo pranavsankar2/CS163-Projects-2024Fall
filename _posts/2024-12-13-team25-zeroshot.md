@@ -128,7 +128,7 @@ As demonstrated by the table from the paper, CLIPScore performs much better than
 ## Running the CLIP Codebase
 Here we run the CLIP codebase from [this GitHub repository](https://github.com/openai/CLIP) to reproduce the results locally.
 
-### Test #1
+#### Test #1
 Given an image of a diagram and the labels, “a diagram”, “a dog”, and “a cat”, after running the below code, we get the following predictions. After reproducing this locally, we get similar results.
 
 ![YOLO]({{ '/assets/images/Team25/newcifar.png' | relative_url }})
@@ -141,7 +141,7 @@ Here are the results we get after running this locally (the scores correspond to
 ![YOLO]({{ '/assets/images/Team25/firstlabel.png' | relative_url }})
 {: style="width: 800px; max-width: 100%;"}
 
-### Test #2
+#### Test #2
 We give a new image of a soccer ball and the labels “soccer ball”, “basketball”, and “tennis ball” (in this order).
 
 Input image:
@@ -151,7 +151,7 @@ Input image:
 ![YOLO]({{ '/assets/images/Team25/test2results.png' | relative_url }})
 {: style="width: 800px; max-width: 100%;"}
 
-### Test #3
+#### Test #3
 
 We give a new image of an iPhone and the labels “iPhone”, “Samsung Galaxy Phone”, and “Google Pixel Phone” (in this order).
 
@@ -166,7 +166,7 @@ Input image:
 
 Here we locally reproduce the zero-shot capabilities of CLIP. We take a random image from the CIFAR-100 dataset and predict the top 5 most likely labels among the 100 labels from this dataset.
 
-### Test #1
+#### Test #1
 
 Input image:
 ![YOLO]({{ '/assets/images/Team25/snake.png' | relative_url }})
@@ -175,7 +175,7 @@ Input image:
 ![YOLO]({{ '/assets/images/Team25/snakecode.png' | relative_url }})
 {: style="width: 800px; max-width: 100%;"}
 
-### Test #2
+#### Test #2
 
 Input image:
 ![YOLO]({{ '/assets/images/Team25/tulip.png' | relative_url }})
@@ -184,7 +184,7 @@ Input image:
 ![YOLO]({{ '/assets/images/Team25/tulipcode.png' | relative_url }})
 {: style="width: 800px; max-width: 100%;"}
 
-### Test #3
+#### Test #3
 
 Input image:
 
